@@ -4,16 +4,12 @@
 
 <template>
   <ul class="menu">
+    <li><router-link to="/Homem"></router-link></li>
   </ul>
   <router-view></router-view>
 </template>
 
 <style scoped>
-.menu li {
-  display: inline-block;
-  & + li {
-    margin-left: 10px;
-  }
-}
+
 </style>
 
