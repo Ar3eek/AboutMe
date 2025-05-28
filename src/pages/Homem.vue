@@ -3,6 +3,7 @@ import {ref, onMounted} from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Nav from "../components/Nav.vue"
+import Footer from "../components/Footer.vue";
 
 const email = ref('')
 const wiadomosc = ref('')
@@ -49,8 +50,8 @@ const wyslij = () => {
              data-aos="fade-up">
       <h2 class="text-5xl font-extrabold mb-4">Cześć, jestem <span class="text-[#00e4c3]">Arkadiusz Korzeniowski</span>
       </h2>
-      <p class="text-xl max-w-2xl">Frontend Developer – tworzę nowoczesne i interaktywne aplikacje w Vue.js i Tailwind
-        CSS.</p>
+      <p class="text-xl max-w-2xl">Frontend Developer – tworzę nowoczesne i interaktywne aplikacje w Vue.js, Tailwind
+        CSS. i JavaScript</p>
     </section>
 
     <!-- Umiejętności -->
@@ -106,11 +107,7 @@ const wyslij = () => {
         </form>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="text-center text-sm py-6 bg-[#0e0e0e] text-white mt-12">
-      <p>&copy; 2025 Arkadiusz Korzeniowski. Wszystkie prawa zastrzeżone.</p>
-    </footer>
+    <Footer/>
   </div>
 </template>
 

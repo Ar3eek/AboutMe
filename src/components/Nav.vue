@@ -7,8 +7,9 @@
     <nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
       <router-link to="/Homem" class="text-2xl font-bold">Arkadiusz Korzeniowski</router-link>
       <ul class="flex gap-6 text-lg">
-        <li class="hover:text-indigo-400">Kontakt</li>
+        <router-link to="/Kontakt" class="hover:text-indigo-400">Kontakt</router-link>
         <router-link to="/Omnie" class="hover:text-indigo-400">O mnie</router-link>
+        <router-link to="/Technologie" class="hover:text-indigo-400">Technologie</router-link>
       </ul>
     </nav>
   </header>
