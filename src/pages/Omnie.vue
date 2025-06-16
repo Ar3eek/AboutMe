@@ -1,7 +1,7 @@
 <script setup>
-import Nav from '../components/Nav.vue'
+import Nav from '../components/Nawigacja.vue'
 import Omnie from '../components/Omnie.vue'
-import Footer from "../components/Footer.vue";
+import Footer from "../components/Stopka.vue";
 </script>
 
 <template>

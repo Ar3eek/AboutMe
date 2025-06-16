@@ -1,7 +1,7 @@
 const routes = [
-    { path: '/', component: () => import('./pages/Homem.vue') }, // <- dodane
+    { path: '/', component: () => import('./pages/StronaGlowna.vue') }, // <- dodane
     { path: '/Omnie', component: () => import('./pages/Omnie.vue') },
-    { path: '/Homem', component: () => import('./pages/Homem.vue') },
+    { path: '/Homem', component: () => import('./pages/StronaGlowna.vue') },
     { path: '/Technologie', component: () => import('./pages/Technologie.vue') },
     { path: '/Kontakt', component: () => import('./pages/Kontakt.vue') },
 ]
