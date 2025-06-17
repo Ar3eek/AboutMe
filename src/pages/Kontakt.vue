@@ -33,22 +33,54 @@ onMounted(() => {
           ref="buttonsContainer"
           class="flex flex-wrap gap-4 justify-center"
       >
-        <button class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
-          <img src="/Immages/linkedin_142369.svg" alt="linkedin" class="h-[24px] group-hover:brightness-0 group-hover:invert">
+        <a
+            href="https://www.linkedin.com/in/arkadiusz-korzeniowski-850a56309/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group"
+        >
+          <img
+              src="/Immages/linkedin_142369.svg"
+              alt="linkedin"
+              class="h-[24px] group-hover:brightness-0 group-hover:invert"
+          />
           <span class="text-white">LinkedIn</span>
-        </button>
-        <button class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
-          <img src="/Immages/mail-inbox-app_3781605.svg" alt="mail" class="h-[24px] group-hover:brightness-0 group-hover:invert">
-          <span class="text-white">E-mail</span>
-        </button>
-        <button class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
-          <img src="/Immages/facebook_1384085.svg" alt="facebook" class="h-[24px] group-hover:brightness-0 group-hover:invert">
+        </a>
+        <a
+            href="mailto:arkadiuszkorzeniowski@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group"
+        >
+          <img
+              src="/Immages/mail-inbox-app_3781605.svg"
+              alt="mail"
+              class="h-[24px] group-hover:brightness-0 group-hover:invert"
+          />
+          <span class="text-white">arkadiuszkorzeniowski@gmail.com</span>
+        </a>
+        <a
+            href="https://www.facebook.com/profile.php?id=61571227853726"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
+          <img
+              src="/Immages/facebook_1384085.svg"
+              alt="facebook"
+              class="h-[24px] group-hover:brightness-0 group-hover:invert">
           <span class="text-white">Facebook</span>
-        </button>
-        <button class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
-          <img src="/Immages/instagram_1384089.svg" alt="instagram" class="h-[24px] group-hover:brightness-0 group-hover:invert">
+        </a>
+        <a
+            href="https://www.instagram.com/_korzeniiowski/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
+          <img
+              src="/Immages/instagram_1384089.svg"
+              alt="instagram"
+              class="h-[24px] group-hover:brightness-0 group-hover:invert">
           <span class="text-white">Instagram</span>
-        </button>
+        </a>
       </div>
     </div>
 
