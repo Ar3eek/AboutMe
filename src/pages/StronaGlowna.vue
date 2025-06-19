@@ -29,11 +29,11 @@ onMounted(() => {
     <section id="hero" class="h-[75vh]  flex  justify-center items-center text-center " data-aos="fade-up">
       <div class=" ">
         <div class="">
-          <h2 class="text-[5.3rem]   ">
+          <h2 class="md:text-[5.3rem] flex-wrap   ">
             <span class="text-white pr-[8px]">Frontend</span>
             <span class="text-[#00e4c3]">developer</span>
           </h2>
-          <div class=" flex flex-col gap-y-[40px]">
+          <div class=" flex flex-col flex-wrap gap-y-[40px]">
             <p  class="text-xl font-mono  tracking-[5px]">{{char}}</p>
             <p class="text-xl  text-center font-sans max-w-2xl">Witaj w moim świecie front-end developmentu, gdzie kreatywność łączy się z funkcjonalnością,
               tworząc wyjątkowe cyfrowe doświadczenia</p>
@@ -44,7 +44,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <MiddleBar/>
+    <MiddleBar class=""/>
     <!-- Umiejętności
     <section class="py-24 px-6 bg-[#121212] text-center" data-aos="fade-up">
       <h3 class="text-4xl font-bold mb-8">Technologie</h3>

@@ -3,34 +3,34 @@
 </script>
 
 <template>
-  <div class="relative w-full h-[160px] bg-gradient-to-r from-[#1f2937] to-[#0e0e0e] overflow-hidden shadow-lg group transition-all duration-500 dark:bg-black">
+  <div class="relative w-full h-[160px] bg-gradient-to-r from-[#1f2937] to-[#0e0e0e] overflow-hidden shadow-lg group transition-all duration-500 dark:bg-black ">
 
     <!-- CENTROWANA ZAWARTOŚĆ -->
-    <div class="relative z-10 flex justify-around items-center h-full gap-x-16 px-4 text-white text-left">
+    <div class="relative z-10 sm:flex flex-col sm:flex-row justify-around items-center h-full  gap-x-16 px-4  text-white text-left">
       <!-- Blok 1 -->
-      <div class="flex items-center ">
-        <div class="text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">1</div>
-        <div class="ml-4">
-          <h3 class="text-xl font-bold">Interfejsy</h3>
-          <p class="text-sm opacity-60">Tak przyjazny dla użytkownika, jak to tylko możliwe</p>
+      <div class="flex items-center pt-[5px] md:pt-0">
+        <div class="text-3xl md:text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">1</div>
+        <div class="md:ml-4">
+          <h3 class="text-[0.9rem] md:text-xl font-bold">Interfejsy</h3>
+          <p class="text-[0.7rem] md:text-sm opacity-60">Tak przyjazny dla użytkownika, jak to tylko możliwe</p>
         </div>
       </div>
 
       <!-- Blok 2 -->
-      <div class="flex items-center">
-        <div class="text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">2</div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-bold">Strony Internetowe</h3>
-          <p class="text-sm opacity-60">Łatwe w użyciu i przyjemny dla oka</p>
+      <div class="flex items-center py-[10px] md:py-0">
+        <div class="text-3xl md:text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">2</div>
+        <div class="md:ml-4">
+          <h3 class="text-[0.9rem] md:text-2xl font-bold">Strony Internetowe</h3>
+          <p class="text-[0.7rem] md:text-sm opacity-60">Łatwe w użyciu i przyjemny dla oka</p>
         </div>
       </div>
 
       <!-- Blok 3 -->
       <div class="flex items-center">
-        <div class="text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">3</div>
-        <div class="ml-4">
-          <h3 class="text-2xl font-bold">Wizualizacje</h3>
-          <p class="text-sm opacity-60">Przejrzyste i transparentne</p>
+        <div class="text-3xl md:text-5xl font-extrabold text-purple-400 leading-tight w-10 flex-shrink-0">3</div>
+        <div class="md:ml-4">
+          <h3 class="text-[0.9rem] md:text-2xl font-bold">Wizualizacje</h3>
+          <p class="text-[0.7rem] md:text-sm opacity-60">Przejrzyste i transparentne</p>
         </div>
       </div>
     </div>

@@ -78,7 +78,7 @@ onMounted(() => {
           <img
               src="/Immages/instagram_1384089.svg"
               alt="instagram"
-              class="h-[24px] group-hover:brightness-0 group-hover:invert">
+              class="h-[24px] group-hover:brightness-0  transition-transform duration-500 group-hover:invert">
           <span class="text-white">Instagram</span>
         </a>
       </div>
@@ -87,3 +87,7 @@ onMounted(() => {
     <Stopka />
   </div>
 </template>
+
+
+<style scoped>
+</style>
