@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, onBeforeUnmount } from "vue";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -9,6 +9,9 @@ const loading = ref(true)
 
 const isModalOpen = ref(false)
 const selectedProjekt = ref(null)
+
+const powiekszonyObraz = ref(null)
+const aktualnyIndex = ref(0)
 
 const openModal = (projekt) => {
   selectedProjekt.value = projekt
@@ -20,7 +23,39 @@ const closeModal = () => {
   selectedProjekt.value = null
 }
 
-// ✅ Blokuj scroll tła przy otwartym modalu
+// Lightbox
+const otworzLightbox = (src, index) => {
+  powiekszonyObraz.value = src
+  aktualnyIndex.value = index
+  document.addEventListener('keydown', obsluzKlawisze)
+}
+
+const zamknijLightbox = () => {
+  powiekszonyObraz.value = null
+  aktualnyIndex.value = 0
+  document.removeEventListener('keydown', obsluzKlawisze)
+}
+
+const obsluzKlawisze = (e) => {
+  if (!powiekszonyObraz.value || !selectedProjekt.value?.galeria?.length) return
+  const galeria = selectedProjekt.value.galeria
+
+  if (e.key === 'Escape') {
+    zamknijLightbox()
+  } else if (e.key === 'ArrowRight') {
+    aktualnyIndex.value = (aktualnyIndex.value + 1) % galeria.length
+    powiekszonyObraz.value = galeria[aktualnyIndex.value]
+  } else if (e.key === 'ArrowLeft') {
+    aktualnyIndex.value = (aktualnyIndex.value - 1 + galeria.length) % galeria.length
+    powiekszonyObraz.value = galeria[aktualnyIndex.value]
+  }
+}
+
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', obsluzKlawisze)
+})
+
+// Scroll blokada
 watch(isModalOpen, (now) => {
   document.body.style.overflow = now ? 'hidden' : 'auto'
 })
@@ -30,7 +65,7 @@ const projekty = [
     nazwa: 'magdakazula.pl',
     opis: 'Responsywna strona dla fotografa, Vue + Tailwind, galeria zdjęć i formularz kontaktowy.',
     pelnyOpis: {
-      wstep: `Strona internetowa przygotowana dla profesjonalnej fotografki Magdy Kazuli to elegancka i nowoczesna witryna, która w przejrzysty sposób prezentuje jej twórczość oraz ofertę. Projekt został stworzony z myślą o estetyce, prostocie i intuicyjnym poruszaniu się użytkownika. `,
+      wstep: `Strona internetowa przygotowana dla profesjonalnej fotografki Magdy Kazuli to elegancka i nowoczesna witryna, która w przejrzysty sposób prezentuje jej twórczość oraz ofertę. Projekt został stworzony z myślą o estetyce, prostocie i intuicyjnym poruszaniu się użytkownika.`,
       czegoSieNauczylem: `Jak projektować responsywne interfejsy przy użyciu Tailwind i Vue 3. Dodatkowo praca z animacjami (AOS, GSAP) oraz integracja z EmailJS.`,
     },
     galeria: [
@@ -79,7 +114,6 @@ const wyslij = () => {
   wiadomosc.value = ''
 }
 </script>
-
 
 <template>
   <section id="projekty" class="py-24 px-6 bg-[#0e0e0e]">
@@ -147,10 +181,12 @@ const wyslij = () => {
             v-for="(img, index) in selectedProjekt.galeria"
             :key="index"
             :src="img"
-            class="rounded-lg shadow-lg h-48 object-cover"
+            class="rounded-lg shadow-lg h-48 object-cover cursor-pointer transition-transform hover:scale-105"
             :alt="`Zrzut ekranu ${index + 1}`"
+            @click="otworzLightbox(img, index)"
         />
       </div>
+
       <!-- Wstęp -->
       <div class="mb-6">
         <h3 class="text-xl font-semibold mb-2">📌 Wstęp</h3>
@@ -162,22 +198,23 @@ const wyslij = () => {
         <h3 class="text-xl font-semibold mb-2">🧠 Czego się nauczyłem ?</h3>
         <p class="text-sm text-gray-300 whitespace-pre-line">{{ selectedProjekt.pelnyOpis?.czegoSieNauczylem }}</p>
       </div>
+
       <!-- Technologie -->
       <div class="mb-6">
         <h3 class="text-xl font-semibold mb-2">🛠️ Tech stack</h3>
         <div class="flex flex-wrap gap-2">
-        <span
-            v-for="t in selectedProjekt.tech"
-            :key="t"
-            class="bg-[#2c2c2c] px-3 py-1 rounded-full text-sm font-medium"
-        >
-          {{ t }}
-        </span>
+          <span
+              v-for="t in selectedProjekt.tech"
+              :key="t"
+              class="bg-[#2c2c2c] px-3 py-1 rounded-full text-sm font-medium"
+          >
+            {{ t }}
+          </span>
         </div>
       </div>
 
-
-      <div class="flex   gap-4 p-6">
+      <!-- Linki -->
+      <div class="flex gap-4 p-6">
         <a
             :href="selectedProjekt.link"
             target="_blank"
@@ -189,15 +226,53 @@ const wyslij = () => {
             v-if="selectedProjekt.github"
             :href="selectedProjekt.github"
             target="_blank"
-            class="bg-[#00e4c3] w-[50%] hover:bg-[#00f0b5] text-black  text-center font-semibold py-2 px-4 rounded-full transition duration-300"
+            class="bg-[#00e4c3] w-[50%] hover:bg-[#00f0b5] text-black text-center font-semibold py-2 px-4 rounded-full transition duration-300"
         >
           Repozytorium
         </a>
       </div>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div
+      v-if="powiekszonyObraz"
+      class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[9999]"
+      @click.self="zamknijLightbox"
+  >
+    <div class="relative max-w-5xl w-full px-4">
+      <!-- Zamknięcie -->
+      <button
+          @click="zamknijLightbox"
+          class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-[#00e4c3] z-10"
+      >
+        &times;
+      </button>
+
+      <!-- Nawigacja -->
+      <button
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold hover:text-[#00e4c3] z-10"
+          @click.stop="obsluzKlawisze({ key: 'ArrowLeft' })"
+      >
+        ‹
+      </button>
+      <button
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold hover:text-[#00e4c3] z-10"
+          @click.stop="obsluzKlawisze({ key: 'ArrowRight' })"
+      >
+        ›
+      </button>
+
+      <!-- Obraz -->
+      <img
+          :src="powiekszonyObraz"
+          alt="Powiększony zrzut ekranu"
+          class="rounded-lg max-h-[90vh] mx-auto object-contain shadow-2xl transition"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-/* Można dodać animacje modala, jeśli chcesz */
+/* opcjonalnie: możesz dodać przejścia fade-in/fade-out */
 </style>

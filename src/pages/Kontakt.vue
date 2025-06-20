@@ -42,7 +42,7 @@ onMounted(() => {
           <img
               src="/Immages/linkedin_142369.svg"
               alt="linkedin"
-              class="h-[24px] group-hover:brightness-0 group-hover:invert"
+              class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert"
           />
           <span class="text-white">LinkedIn</span>
         </a>
@@ -55,7 +55,7 @@ onMounted(() => {
           <img
               src="/Immages/mail-inbox-app_3781605.svg"
               alt="mail"
-              class="h-[24px] group-hover:brightness-0 group-hover:invert"
+              class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert"
           />
           <span class="text-white">arkadiuszkorzeniowski@gmail.com</span>
         </a>
@@ -67,7 +67,7 @@ onMounted(() => {
           <img
               src="/Immages/facebook_1384085.svg"
               alt="facebook"
-              class="h-[24px] group-hover:brightness-0 group-hover:invert">
+              class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert" />
           <span class="text-white">Facebook</span>
         </a>
         <a
@@ -78,7 +78,7 @@ onMounted(() => {
           <img
               src="/Immages/instagram_1384089.svg"
               alt="instagram"
-              class="h-[24px] group-hover:brightness-0  transition-transform duration-500 group-hover:invert">
+              class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert" />
           <span class="text-white">Instagram</span>
         </a>
       </div>
@@ -88,6 +88,15 @@ onMounted(() => {
   </div>
 </template>
 
+<!-- WAŻNE: style bez 'scoped' -->
+<style>
+.rotate-icon {
+  transition: transform 0.6s ease;
+}
 
-<style scoped>
+.group:hover .rotate-icon {
+  transform: rotateX(360deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
 </style>
