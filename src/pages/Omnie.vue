@@ -10,6 +10,7 @@ import Footer from "../components/Stopka.vue";
     <Omnie/>
   </div>
 
+
 </template>
 
 <style scoped>

@@ -79,9 +79,15 @@ const projekty = [
   },
   {
     nazwa: 'Mateusz Manaj Portfolio',
+    galeria: [
+      '/Immages/zrzut4.png',
+      '/Immages/zrzut5.png',
+      '/Immages/zrzut6.png',
+      '/Immages/zrzut7.png',
+    ],
     opis: 'Strona portfolio z responsywnym UI.',
-    link: 'https://github.com/twojlogin/3d-portfolio',
-    tech: ['Vue', 'Tailwind', 'JavaScript'],
+    link: 'https://mateusz-portfolio-stronka.netlify.app/',
+    tech: ['Vue', 'Tailwind', 'JavaScript', 'PWA'],
     github: 'https://github.com/twojlogin/mobility-calc'
   },
   {
