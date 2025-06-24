@@ -45,13 +45,16 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-.fade-slide-enter-active,
-.fade-slide-leave-active {
-  transition: all 0.5s ease;
+.slide-enter-from {
+  transform: translateX(-100%);
 }
-.fade-slide-enter-from,
-.fade-slide-leave-to {
-  opacity: 0;
-  transform: scale(0.95) translateY(-10px);
+.slide-enter-to {
+  transform: translateX(0%);
+}
+.slide-leave-from {
+  transform: translateX(0%);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
 }
 </style>
