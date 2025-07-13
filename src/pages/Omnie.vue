@@ -5,13 +5,15 @@ import Footer from "../components/Stopka.vue";
 </script>
 
 <template>
-  <div class="font-sans bg-[#0e0e0e] text-white min-h-screen">
-    <Nav/>
-    <Omnie/>
+  <div class="flex flex-col min-h-screen font-sans bg-[#0e0e0e] text-white">
+    <Nav />
+    <div class="flex-1">
+      <Omnie />
+    </div>
+    <Footer />
   </div>
-
-
 </template>
+
 
 <style scoped>
 

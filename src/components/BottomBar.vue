@@ -10,7 +10,7 @@ onMounted(() => {
 
 <template>
   <section class="flex flex-col md:flex-row items-center justify-evenly gap-8 p-6 bg-[#0e0e0e] rounded-2xl" data-aos="fade-up">
-    <!-- Cytat -->
+    <!--
     <div class="bg-[#161b22] text-white flex flex-col justify-center p-6 rounded-2xl shadow-md max-w-md w-full">
       <p class="text-xl md:text-2xl font-medium italic text-gray-200 text-center">
         <span class="text-3xl text-gray-400">“</span>
@@ -24,6 +24,7 @@ onMounted(() => {
         – Moje podejście do każdego złożonego problemu w kodzie
       </p>
     </div>
+     Cytat -->
 
     <!-- Avatar + info -->
     <div class="flex  items-center text-center">
