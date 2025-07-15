@@ -1,10 +1,37 @@
 <script setup>
-
+const technologies = [
+  { name: 'HTML + CSS', duration: '1 rok, 6 miesięcy' },
+  { name: 'JavaScript', duration: '1 rok, 6 miesięcy' },
+  { name: 'Vue', duration: '1 rok, 6 miesięcy' },
+  { name: 'GSAP', duration: '1 rok, 3 miesięcy' },
+  { name: 'Tailwind', duration: '1 rok, 4 miesięcy' },
+];
+const newTechnologies = [
+  { name: 'React', duration: '4 miesięce' },
+  { name: 'TypeScript', duration: '4 miesięce' },
+  { name: 'Next.js', duration: '4 miesięce' },
+];
+const skills = [
+  'HTML5',
+  'JavaScript',
+  'CSS',
+  'RWD',
+  'Tailwind',
+  'Gsap',
+  'Vue 3',
+  'Vuex',
+  'Vite',
+  'Figma',
+  'ClearCode',
+  'GitHub',
+  'AOS.js',
+  'LightBox',
+];
 </script>
 
 <template>
-  <div class="  flex flex-col justify-center items-center text-white p-6 space-y-8">
-    <div class="relative w-[200px] xl:w-[1200px] rounded-[50px] overflow-hidden bg-[#0f172a] p-6 flex items-center gap-4 z-10">
+  <div class="  flex flex-col justify-center items-center text-white p-6 space-y-8" >
+    <div class="relative w-[200px] xl:w-[1400px] rounded-[50px] overflow-hidden bg-[#0f172a] p-6 flex items-center gap-4 z-10">
       <!-- Tło: fale -->
       <div class="absolute inset-0 z-0">
         <!-- Fala 1 -->
@@ -39,41 +66,56 @@
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row justify-center gap-6">
-      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[380px]">
-        <h2 class="text-lg font-semibold  mb-4">Umiejętności</h2>
-        <div class=" flex-wrap grid grid-cols-2 gap-2">
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">HTML5</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">JavaScript</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">CSS</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">RWD</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Tailwind</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Gsap</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Vue 3</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Vuex</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Vite</div>
-          <div class="bg-[#0e494d] p-2 rounded-[10px] text-center ">Figma</div>
+    <div class="flex flex-col md:flex-row justify-center gap-10" data-aos="fade-up">
+      <div class="bg-slate-800 p-8 rounded-xl shadow w-full md:w-[420px]">
+        <h2 class="text-[1.4rem] font-semibold text-white mb-6">Umiejętności</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div
+              v-for="skill in skills"
+              :key="skill"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
+          >
+            {{ skill }}
+          </div>
         </div>
       </div>
-      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[380px]">
-        <h2 class="text-lg font-semibold mb-4">O mnie</h2>
-        <p class="text-sm text-white/80 mb-2">
-          Cześć! Nazywam się Arek. Od kilku lat codziennie programuję i rozwijam swoje umiejętności.
+      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[420px]">
+        <h2 class="text-[1.4rem] font-semibold mb-4">O mnie</h2>
+        <p class="text-[1rem] text-white/80 mb-2">
+          Cześć, Nazywam się Arek! <br><br> Programowanie towarzyszy mi od wielu lat — nie jako chwilowe hobby, ale jako prawdziwa pasja, która codziennie napędza mnie do działania.
+          Od samego początku fascynowało mnie tworzenie czegoś od zera,
+          rozwiązywanie złożonych problemów i dążenie do perfekcji w kodzie.
         </p>
-        <p class="text-sm text-white/70">
-          Moje doświadczenie w animacji 2D, fotografii i grafice przekłada się na unikalne podejście do front-endu.
+        <p class="text-[1rem] text-white/70 mb-2 ">
+          Jestem osobą wytrwałą i konsekwentną – jeśli stawiam sobie cel, dążę do niego aż do skutku. Każde wyzwanie traktuję jako szansę na rozwój.
+          Uwielbiam uczyć się nowych technologii, eksperymentować z rozwiązaniami i dbać o detale — zarówno w warstwie wizualnej, jak i architekturze aplikacji.
+        </p>
+        <p class="text-[1rem] text-white/70 mb-2  ">
+          Front-end to dla mnie nie tylko kod – to połączenie precyzji, estetyki i wydajności.
+          Staram się tworzyć interfejsy, które nie tylko dobrze wyglądają, ale przede wszystkim działają płynnie i są intuicyjne dla użytkownika.
         </p>
       </div>
-      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[380px]">
-        <h2 class="text-lg font-semibold mb-4">Koduję od</h2>
-        <div class="space-y-2">
+      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[420px]">
+        <h2 class="text-[1.4rem] font-semibold mb-4 text-white">Koduję od:</h2>
+        <div class="grid grid-cols-2 gap-3">
           <div
-              v-for="item in codingSince"
-              :key="item.tech"
-              class="bg-slate-700 p-3 rounded-lg"
+              v-for="item in technologies"
+              :key="item.name"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
           >
-            <p class="font-medium text-white/90">{{ item.tech }}</p>
-            <p class="text-sm text-white/60">{{ item.time }}</p>
+            <p>{{ item.name }}</p>
+            <p class="text-sm text-white/70">{{ item.duration }}</p>
+          </div>
+        </div>
+        <h2 class="text-[1.4rem] font-semibold my-4 text-white">Uczę się:</h2>
+        <div class="grid grid-cols-2 gap-3">
+          <div
+              v-for="item in newTechnologies"
+              :key="item.name"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
+          >
+            <p>{{ item.name }}</p>
+            <p class="text-sm text-white/70">{{ item.duration }}</p>
           </div>
         </div>
       </div>

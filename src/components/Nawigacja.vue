@@ -17,9 +17,16 @@ const toggleMenu = () => {
 
       <!-- Desktop menu -->
       <ul class="hidden md:flex md:gap-6 md:text-lg flex-wrap">
-        <router-link to="/Kontakt" class="hover:text-indigo-400">Kontakt</router-link>
-        <router-link to="/Omnie" class="hover:text-indigo-400">O mnie</router-link>
-        <router-link to="/Technologie" class="hover:text-indigo-400">GitHub</router-link>
+        <router-link to="/Kontakt" class="hover:text-green-300">Kontakt</router-link>
+        <router-link to="/Omnie" class="hover:text-green-300">O mnie</router-link>
+        <a
+            href="https://github.com/Ar3eek"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-green-300"
+        >
+          GitHub
+        </a>
       </ul>
 
       <!-- Hamburger button (mobile only) -->
@@ -35,9 +42,9 @@ const toggleMenu = () => {
           class="md:hidden absolute left-4 right-4 mt-2 bg-[#1f2937] bg-opacity-95 rounded-xl shadow-xl p-6 transition-all duration-500 ease-in-out transform origin-top scale-100"
       >
         <ul class="flex flex-col gap-4 text-lg">
-          <router-link @click="toggleMenu" to="/Kontakt" class="hover:text-indigo-400">Kontakt</router-link>
-          <router-link @click="toggleMenu" to="/Omnie" class="hover:text-indigo-400">O mnie</router-link>
-          <router-link @click="toggleMenu" to="/Technologie" class="hover:text-indigo-400">GitHub</router-link>
+          <router-link @click="toggleMenu" to="/Kontakt" class="hover:text-green-300">Kontakt</router-link>
+          <router-link @click="toggleMenu" to="/Omnie" class="hover:text-green-300">O mnie</router-link>
+          <router-link @click="toggleMenu" to="/Technologie" class="hover:text-green-300">GitHub</router-link>
         </ul>
       </div>
     </transition>
