@@ -280,5 +280,5 @@ const wyslij = () => {
 </template>
 
 <style scoped>
-/* opcjonalnie: możesz dodać przejścia fade-in/fade-out */
+
 </style>

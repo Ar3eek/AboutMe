@@ -6,7 +6,7 @@
   <div class="relative w-full h-[160px] bg-gradient-to-r from-[#1f2937] to-[#0e0e0e] overflow-hidden shadow-lg  group transition-all duration-500 dark:bg-black ">
 
     <!-- CENTROWANA ZAWARTOŚĆ -->
-    <div class="relative z-10 sm:flex flex-col sm:flex-row md:justify-around items-center h-full  gap-x-16 p-4  text-white text-left">
+    <div class="relative z-10 sm:flex flex-col sm:flex-row md:justify-evenly items-center h-full  gap-x-16 p-4  text-white text-left">
       <!-- Blok 1 -->
       <div class="flex items-center ">
         <div class="text-3xl md:text-5xl font-extrabold text-[#00e4c3] leading-tight w-10 flex-shrink-0">1</div>

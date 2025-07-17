@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div class="font-sans bg-[#0e0e0e] text-white  ">
     <Nav/>
-    <section id="hero" class="h-[75vh] relative flex  justify-center items-center text-center " data-aos="fade-up">
+    <section id="hero" class="h-[65vh] relative flex  justify-center items-center text-center " data-aos="fade-up">
       <div class=" ">
         <div class="">
           <h2 class="text-[2rem] md:text-[5.3rem] flex-wrap   ">
