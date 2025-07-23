@@ -28,18 +28,19 @@ onMounted(() => {
   setTimeout(() => loading.value = false, 1500)
   AOS.init({ once: true, duration: 1000 })
 })
+
 </script>
 <template>
   <div class="font-sans bg-[#0e0e0e] text-white  ">
     <Nav/>
-    <section id="hero" class="h-[65vh] relative flex  justify-center items-center text-center " data-aos="fade-up">
+    <section id="hero" class="h-[75vh] relative flex  justify-center items-center text-center " data-aos="fade-up">
       <div class=" ">
-        <div class="">
-          <h2 class="text-[2rem] md:text-[5.3rem] flex-wrap   ">
+        <div class="" >
+          <h2 class="text-[2rem] md:text-[5.3rem] flex-wrap ">
             <span class="text-white pr-[8px]">Frontend</span>
             <span class="text-[#00e4c3]">developer</span>
           </h2>
-          <div class=" flex flex-col flex-wrap gap-y-[40px]">
+          <div class=" flex flex-col flex-wrap gap-y-[40px]" >
             <p  class=" text-[1rem] md:text-xl font-mono  tracking-[5px]">{{char}}</p>
             <p class=" text-[0.98rem] md:text-xl  text-center font-sans max-w-2xl">Witaj w moim świecie front-end developmentu, gdzie kreatywność łączy się z funkcjonalnością,
               tworząc wyjątkowe cyfrowe doświadczenia</p>

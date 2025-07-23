@@ -137,7 +137,7 @@ const wyslij = () => {
         <div
             v-for="projekt in projekty"
             :key="projekt.nazwa"
-            class="flex flex-col justify-between bg-[#1a1a1a] text-white p-6 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-[0_0_20px_#00e4c3] transition duration-300"
+            class="flex flex-col justify-between bg-[#1a1a1a] text-white cursor-pointer p-6 rounded-2xl transition duration-200 transform hover:scale-120"
             data-aos="fade-up"
         >
           <div>
@@ -169,7 +169,7 @@ const wyslij = () => {
   </section>
 
   <!-- Modal -->
-  <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+  <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" @click.self="closeModal">
     <div class="bg-gradient-to-b from-[#1a1a1a] to-[#101010] text-white p-8 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
       <button
           @click="closeModal"
@@ -188,8 +188,7 @@ const wyslij = () => {
             :key="index"
             :src="img"
             class="rounded-lg shadow-lg h-48 object-cover cursor-pointer transition-transform hover:scale-105"
-            :alt="`Zrzut ekranu ${index + 1}`"
-            @click="otworzLightbox(img, index)"
+            :alt="`Zrzut ekranu ${index + 1}`" @click="otworzLightbox(img, index)" @keydown.escape="zamknijLightbox" @mousedown.self="zamknijLightbox"
         />
       </div>
 
@@ -197,12 +196,6 @@ const wyslij = () => {
       <div class="mb-6">
         <h3 class="text-xl font-semibold mb-2">📌 Wstęp</h3>
         <p class="text-sm text-gray-300 whitespace-pre-line">{{ selectedProjekt.pelnyOpis?.wstep }}</p>
-      </div>
-
-      <!-- Co się nauczyłem -->
-      <div class="mb-6">
-        <h3 class="text-xl font-semibold mb-2">🧠 Czego się nauczyłem ?</h3>
-        <p class="text-sm text-gray-300 whitespace-pre-line">{{ selectedProjekt.pelnyOpis?.czegoSieNauczylem }}</p>
       </div>
 
       <!-- Technologie -->

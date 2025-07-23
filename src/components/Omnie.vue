@@ -26,6 +26,7 @@ const skills = [
   'GitHub',
   'AOS.js',
   'LightBox',
+  'Play Guitar',
 ];
 </script>
 
@@ -55,9 +56,9 @@ const skills = [
 
       <!-- Treść: zdjęcie + tekst -->
       <img
-          src="/Immages/myface.jpeg"
+          src="/Immages/jaaa.jpeg"
           alt="Avatar"
-          class="w-[110px] h-[110px] rounded-full object-cover object-[0_-20px] relative z-10"
+          class="w-[110px] h-[110px] rounded-full object-cover  relative z-10"
       />
       <div class="relative z-10">
         <h1 class="text-2xl font-bold text-white">Arek</h1>
@@ -73,15 +74,15 @@ const skills = [
           <div
               v-for="skill in skills"
               :key="skill"
-              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
           >
             {{ skill }}
           </div>
         </div>
       </div>
-      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[420px]">
+      <div class="bg-slate-800 p-6 rounded-xl shadow w-full md:w-[420px] ">
         <h2 class="text-[1.4rem] font-semibold mb-4">O mnie</h2>
-        <p class="text-[1rem] text-white/80 mb-2">
+        <p class="text-[1rem] text-white/80 mb-2 " >
           Cześć, Nazywam się Arek! <br><br> Programowanie towarzyszy mi od wielu lat — nie jako chwilowe hobby, ale jako prawdziwa pasja, która codziennie napędza mnie do działania.
           Od samego początku fascynowało mnie tworzenie czegoś od zera,
           rozwiązywanie złożonych problemów i dążenie do perfekcji w kodzie.
@@ -101,7 +102,7 @@ const skills = [
           <div
               v-for="item in technologies"
               :key="item.name"
-              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
           >
             <p>{{ item.name }}</p>
             <p class="text-sm text-white/70">{{ item.duration }}</p>
@@ -112,7 +113,7 @@ const skills = [
           <div
               v-for="item in newTechnologies"
               :key="item.name"
-              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
           >
             <p>{{ item.name }}</p>
             <p class="text-sm text-white/70">{{ item.duration }}</p>

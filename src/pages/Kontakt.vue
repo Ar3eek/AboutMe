@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
-
 import Nav from '../components/Nawigacja.vue'
 import Stopka from '../components/Stopka.vue'
 
@@ -27,8 +26,6 @@ onMounted(() => {
         Wybierz <span class="text-[#00e4c3]">jak chcesz</span> się ze mną
         <span class="text-[#00e4c3]"> skontaktować</span>
       </h1>
-
-      <!-- Kontener do animacji -->
       <div
           ref="buttonsContainer"
           class="flex flex-wrap gap-4 justify-center"
@@ -37,8 +34,8 @@ onMounted(() => {
             href="https://www.linkedin.com/in/arkadiusz-korzeniowski-850a56309/"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group"
-        >
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3]/70 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)] group">
+
           <img
               src="/Immages/linkedin_142369.svg"
               alt="linkedin"
@@ -50,8 +47,8 @@ onMounted(() => {
             href="mailto:arkadiuszkorzeniowski@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group"
-        >
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3]/70 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)] group">
+
           <img
               src="/Immages/mail-inbox-app_3781605.svg"
               alt="mail"
@@ -63,7 +60,7 @@ onMounted(() => {
             href="https://www.facebook.com/profile.php?id=61571227853726"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3]/70 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)] group">
           <img
               src="/Immages/facebook_1384085.svg"
               alt="facebook"
@@ -74,7 +71,7 @@ onMounted(() => {
             href="https://www.instagram.com/_korzeniiowski/"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3] hover:shadow-[0_4px_12px_rgba(0,228,195,0.15)] group">
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3]/70 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)] group">
           <img
               src="/Immages/instagram_1384089.svg"
               alt="instagram"
@@ -88,7 +85,6 @@ onMounted(() => {
   </div>
 </template>
 
-<!-- WAŻNE: style bez 'scoped' -->
 <style>
 .rotate-icon {
   transition: transform 0.6s ease;

@@ -9,7 +9,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50">
+  <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50 ">
     <nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
       <div>
         <router-link to="/Homem" class="text-3xl font-bold">CodeWorks</router-link>
@@ -39,10 +39,10 @@ const toggleMenu = () => {
     <transition name="fade-slide">
       <div
           v-if="isMenuOpen"
-          class="md:hidden absolute left-4 right-4 mt-2 bg-[#1f2937] bg-opacity-95 rounded-xl shadow-xl p-6 transition-all duration-500 ease-in-out transform origin-top scale-100"
+          class="md:hidden  cursor-pointer absolute left-4 right-4 mt-2 bg-[#1f2937] bg-opacity-95 rounded-xl shadow-xl p-6 transition-all duration-500 ease-in-out transform origin-top scale-100 z-50"
       >
         <ul class="flex flex-col gap-4 text-lg">
-          <router-link @click="toggleMenu" to="/Kontakt" class="hover:text-green-300">Kontakt</router-link>
+          <router-link @click="toggleMenu" to="/Kontakt" class="hover:text-green-300 cursor-pointer">Kontakt</router-link>
           <router-link @click="toggleMenu" to="/Omnie" class="hover:text-green-300">O mnie</router-link>
           <router-link @click="toggleMenu" to="/Technologie" class="hover:text-green-300">GitHub</router-link>
         </ul>
@@ -52,16 +52,13 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-.slide-enter-from {
-  transform: translateX(-100%);
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
 }
-.slide-enter-to {
-  transform: translateX(0%);
-}
-.slide-leave-from {
-  transform: translateX(0%);
-}
-.slide-leave-to {
-  transform: translateX(-100%);
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
 }
 </style>

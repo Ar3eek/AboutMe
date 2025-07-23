@@ -12,7 +12,7 @@
         <div class="text-3xl md:text-5xl font-extrabold text-[#00e4c3] leading-tight w-10 flex-shrink-0">1</div>
         <div class="md:ml-4">
           <h3 class="text-[0.9rem] md:text-xl font-bold">Interfejsy</h3>
-          <p class="text-[0.7rem] md:text-sm opacity-60">Tak przyjazny dla użytkownika, jak to tylko możliwe</p>
+          <p class="text-[0.7rem] md:text-sm opacity-60">Tak przyjazne dla użytkownika, jak to tylko możliwe</p>
         </div>
       </div>
 
