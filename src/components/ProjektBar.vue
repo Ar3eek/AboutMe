@@ -66,7 +66,6 @@ const projekty = [
     opis: 'Responsywna strona dla fotografa, Vue + Tailwind, galeria zdjęć i formularz kontaktowy.',
     pelnyOpis: {
       wstep: `Strona internetowa przygotowana dla profesjonalnej fotografki Magdy Kazuli to elegancka i nowoczesna witryna, która w przejrzysty sposób prezentuje jej twórczość oraz ofertę. Projekt został stworzony z myślą o estetyce, prostocie i intuicyjnym poruszaniu się użytkownika.`,
-      czegoSieNauczylem: `Jak projektować responsywne interfejsy przy użyciu Tailwind i Vue 3. Dodatkowo praca z animacjami (AOS, GSAP) oraz integracja z EmailJS.`,
     },
     galeria: [
       '/Immages/zrzut1.png',
@@ -86,26 +85,30 @@ const projekty = [
       '/Immages/zrzut7.png',
     ],
     opis: 'Strona portfolio z responsywnym UI.',
+    pelnyOpis: {
+      wstep: `Strona prezentująca twórczość perkusisty – zawiera ścieżki audio z nagraniami, wideo z występami (z wbudowanymi odtwarzaczami) oraz szczegółowe opisy dotyczące artysty, jego stylu gry i doświadczenia. Projekt skupia się na czytelnej prezentacji treści multimedialnych i podkreśleniu muzycznego charakteru strony.
+
+`,
+    },
     link: 'https://mateusz-portfolio-stronka.netlify.app/',
     tech: ['Vue', 'Tailwind', 'JavaScript', 'PWA'],
-    github: 'https://github.com/twojlogin/mobility-calc'
+    github: 'https://bitbucket.org/arkadiusz-korzeniowski/mateuszstronka/src/main/'
   },
   {
-    nazwa: 'Mobility Calculator',
-    opis: 'Aplikacja do obliczania kosztów usług transportowych.',
+    nazwa: 'Kalculator',
+    opis: 'Prosty kalkulator stworzony w JavaScript, HTML i Tailwind CSS.',
     pelnyOpis: {
-      wstep: `Many interactive web applications focus on the technical aspects of the programming they need...`,
+      wstep: `Jest to mój pierwszy projekt z wykorzystaniem JavaScript oraz Html i  CSS. Po kilku miesiącach nauki postanowiłem stworzyć prosty kalkulator, który pozwala na wykonywanie podstawowych działań matematycznych. Projekt ten był dla mnie ważnym krokiem w nauce programowania, ponieważ pozwolił mi zrozumieć podstawy logiki programowania i manipulacji DOM.`,
       dlaczego: `The insurance company offers a transportation service...`,
       czegoSieNauczylem: `How to improve UX while working with complex business logic.`,
     },
     galeria: [
-      '/img/calc-1.png',
-      '/img/calc-2.png',
-      '/img/calc-3.png'
+      '/Immages/kalk.png',
+
     ],
-    tech: ['Vue', 'Tailwind', 'Pinia', 'Vite'],
+    tech: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://mobility.example.com',
-    github: 'https://github.com/twojlogin/mobility-calc'
+    github: 'https://github.com/Ar3eek/Calculator-Js'
   }
 ]
 

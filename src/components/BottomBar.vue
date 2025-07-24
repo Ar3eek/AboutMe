@@ -30,7 +30,7 @@ onMounted(() => {
     <!-- Avatar + info -->
     <div class="flex  items-center text-center">
       <img
-          src="/Immages/guita.JPG "
+          src="/Immages/guita.jpg "
           alt="My photo"
           class="rounded-full w-40 h-40  object-[0_-10px] object-cover    border-[#1f2937]"
       />
