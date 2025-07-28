@@ -117,31 +117,29 @@ onMounted(() => {
   AOS.init({ once: true, duration: 1000 })
 })
 
-const wyslij = () => {
-  alert(`Wysłano wiadomość od: ${email.value}\nTreść: ${wiadomosc.value}`)
-  email.value = ''
-  wiadomosc.value = ''
-}
+
 </script>
 
 <template>
-  <section id="projekty" class="py-24 px-6 bg-[#0e0e0e]">
+  <section id="projekty" class="py-24 px-8  bg-[#0e0e0e] ">
     <div class="max-w-6xl mx-auto">
       <div>
-        <h3 class="text-4xl font-bold text-center mb-[10px]" data-aos="fade-up">
+        <h3 class="text-4xl font-bold text-center mb-[10px]">
           Wybierz project
         </h3>
-        <p class="text-sm opacity-50 font-bold text-center mb-12" data-aos="fade-up">
+        <p class="text-sm opacity-50 font-bold text-center mb-12" >
           Odwiedź mojego <span class="text-[#00e4c3]"> GitHuba </span> żeby zobaczyć więcej
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  " >
+
         <div
             v-for="projekt in projekty"
             :key="projekt.nazwa"
-            class="flex flex-col justify-between bg-[#1a1a1a] text-white cursor-pointer p-6 rounded-2xl transition duration-200 transform hover:scale-120"
-            data-aos="fade-up"
+            class="flex flex-col justify-between bg-[#1a1a1a] text-white cursor-pointer p-8 rounded-2xl
+         transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)]"
+
         >
           <div>
             <h4 class="text-2xl font-semibold mb-2">{{ projekt.nazwa }}</h4>

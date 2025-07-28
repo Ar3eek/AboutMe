@@ -10,22 +10,29 @@ const toggleMenu = () => {
 
 <template>
   <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50 ">
-    <nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
+    <nav class="flex items-center   justify-between max-w-7xl mx-auto px-6 py-4">
       <div>
-        <router-link to="/Homem" class="text-3xl font-bold">CodeWorks</router-link>
+        <router-link to="/Homem" class="text-4xl font-bold">CodeWorks</router-link>
       </div>
 
       <!-- Desktop menu -->
-      <ul class="hidden md:flex md:gap-6 md:text-lg flex-wrap">
-        <router-link to="/Kontakt" class="hover:text-green-300">Kontakt</router-link>
-        <router-link to="/Omnie" class="hover:text-green-300">O mnie</router-link>
+      <ul class="hidden md:flex md:gap-6 md:text-xl  flex-wrap">
+        <router-link to="/Kontakt" class="relative group hover:text-green-300">
+          Kontakt
+          <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+        </router-link>
+        <router-link to="/Omnie" class="relative group hover:text-green-300">
+          O mnie
+          <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+        </router-link>
         <a
             href="https://github.com/Ar3eek"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-green-300"
+            class="relative group hover:text-green-300"
         >
           GitHub
+          <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
         </a>
       </ul>
 
