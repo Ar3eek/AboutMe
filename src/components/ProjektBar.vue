@@ -77,7 +77,7 @@ const projekty = [
     github: 'https://github.com/twojlogin/mobility-calc'
   },
   {
-    nazwa: 'Mateusz Manaj Portfolio',
+    nazwa: 'muyzka.mateuszmanaj.pl',
     galeria: [
       '/Immages/zrzut4.png',
       '/Immages/zrzut5.png',
@@ -90,7 +90,7 @@ const projekty = [
 
 `,
     },
-    link: 'https://mateusz-portfolio-stronka.netlify.app/',
+    link: ' https://muzyka.mateuszmanaj.pl/',
     tech: ['Vue', 'Tailwind', 'JavaScript', 'PWA'],
     github: 'https://bitbucket.org/arkadiusz-korzeniowski/mateuszstronka/src/main/'
   },
@@ -128,7 +128,8 @@ onMounted(() => {
           Wybierz project
         </h3>
         <p class="text-sm opacity-50 font-bold text-center mb-12" >
-          Odwiedź mojego <span class="text-[#00e4c3]"> GitHuba </span> żeby zobaczyć więcej
+          Odwiedź mojego <span class="text-[#00e4c3]">
+          <a href="https://github.com/Ar3eek">GitHuba</a></span> żeby zobaczyć więcej
         </p>
       </div>
 
@@ -143,7 +144,7 @@ onMounted(() => {
         >
           <div>
             <h4 class="text-2xl font-semibold mb-2">{{ projekt.nazwa }}</h4>
-            <p class="mb-4">{{ projekt.opis }}</p>
+            <p class="mb-4 text-[0.9rem]">{{ projekt.opis }}</p>
 
             <div class="flex flex-wrap gap-2 mt-4 mb-6">
               <span

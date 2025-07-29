@@ -9,10 +9,10 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50 ">
+  <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50  ">
     <nav class="flex items-center   justify-between max-w-7xl mx-auto px-6 py-4">
       <div>
-        <router-link to="/Homem" class="text-4xl font-bold">CodeWorks</router-link>
+        <router-link to="/StronaGlowna" class="text-3xl font-bold">Arkadiusz Korzeniowski</router-link>
       </div>
 
       <!-- Desktop menu -->
