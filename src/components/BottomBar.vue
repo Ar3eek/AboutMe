@@ -11,20 +11,7 @@ onMounted(() => {
 <template>
   <section class="flex flex-col md:flex-row items-center justify-center gap-x-[220px] gap-8 p-6 bg-[#0e0e0e] rounded-2xl" data-aos="fade-up">
 
-    <!-- Left side: contact info
-    <div class="bg-[#161b22] text-white flex flex-col justify-center items-center p-8 rounded-2xl shadow-lg max-w-md w-full">
-      <p class="text-2xl md:text-3xl font-semibold italic text-gray-200 text-center mb-2">
-        <span class="text-4xl text-[#00e4c3]">“</span>
-        Divide et impera.
-        <span class="text-4xl text-[#00e4c3]">”</span>
-      </p>
-      <p class="text-base text-gray-400 text-right w-full italic mb-1">
-        – Julius Caesar
-      </p>
-      <p class="text-sm text-gray-500 mt-4 text-center">
-        – Moje podejście do każdego złożonego problemu w kodzie
-      </p>
-    </div>-->
+
 
 
     <!-- Avatar + info -->

@@ -32,7 +32,7 @@ const skills = [
 
 <template>
   <div class="  flex flex-col justify-center items-center text-white p-6 space-y-8" >
-    <div class="relative w-[200px] xl:w-[1400px] rounded-[50px] overflow-hidden bg-[#0f172a] p-6 flex items-center gap-4 z-10">
+    <div class="relative md:w-[200px] xl:w-[1400px] rounded-[50px] overflow-hidden bg-[#0f172a] p-6 flex items-center gap-4 z-10">
       <!-- Tło: fale -->
       <div class="absolute inset-0 z-0">
         <!-- Fala 1 -->

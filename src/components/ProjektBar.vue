@@ -59,6 +59,13 @@ onBeforeUnmount(() => {
 watch(isModalOpen, (now) => {
   document.body.style.overflow = now ? 'hidden' : 'auto'
 })
+const odwiedzStrone = (projekt) => {
+  if (projekt.nazwa === 'Kalkulator') {
+    alert('Strona jest dostępna tylko lokalnie.\nAby uruchomić projekt:\n1. Pobierz repozytorium.\n2. Otwórz plik index.html w folderze Kalkulator2. /\n3. Użyj lokalnego serwera, np. Live Server w VS Code.\n4. Przepraszam za utrudnienia ! \n5. Wkrótce będzie dostępna online.');
+  } else {
+    window.open(projekt.link, '_blank');
+  }
+}
 
 const projekty = [
   {
@@ -74,10 +81,10 @@ const projekty = [
     ],
     link: 'https://magdakazula.pl/',
     tech: ['Vue 3', 'Tailwind CSS', 'AOS.js', 'EmailJS', 'JavaScript', 'GSAP', 'LightBox'],
-    github: 'https://github.com/twojlogin/mobility-calc'
+    github: 'https://github.com/Ar3eek/Photography'
   },
   {
-    nazwa: 'muyzka.mateuszmanaj.pl',
+    nazwa: 'mateuszmanaj.pl',
     galeria: [
       '/Immages/zrzut4.png',
       '/Immages/zrzut5.png',
@@ -95,7 +102,7 @@ const projekty = [
     github: 'https://bitbucket.org/arkadiusz-korzeniowski/mateuszstronka/src/main/'
   },
   {
-    nazwa: 'Kalculator',
+    nazwa: 'Kalkulator',
     opis: 'Prosty kalkulator stworzony w JavaScript, HTML i Tailwind CSS.',
     pelnyOpis: {
       wstep: `Jest to mój pierwszy projekt z wykorzystaniem JavaScript oraz Html i  CSS. Po kilku miesiącach nauki postanowiłem stworzyć prosty kalkulator, który pozwala na wykonywanie podstawowych działań matematycznych. Projekt ten był dla mnie ważnym krokiem w nauce programowania, ponieważ pozwolił mi zrozumieć podstawy logiki programowania i manipulacji DOM.`,
@@ -107,7 +114,7 @@ const projekty = [
 
     ],
     tech: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://mobility.example.com',
+    link: 'https://ar3eek.github.io/Calculator-Js/',
     github: 'https://github.com/Ar3eek/Calculator-Js'
   }
 ]
@@ -216,18 +223,17 @@ onMounted(() => {
 
       <!-- Linki -->
       <div class="flex gap-4 p-6">
-        <a
-            :href="selectedProjekt.link"
-            target="_blank"
+        <button
+            @click="odwiedzStrone(selectedProjekt)"
             class="bg-[#00e4c3] hover:bg-[#00f0b5] w-[50%] text-black text-center font-semibold py-2 px-4 rounded-full transition duration-300"
         >
           Odwiedź stronę
-        </a>
+        </button>
         <a
             v-if="selectedProjekt.github"
             :href="selectedProjekt.github"
             target="_blank"
-            class="bg-[#00e4c3] w-[50%] hover:bg-[#00f0b5] text-black text-center font-semibold py-2 px-4 rounded-full transition duration-300"
+            class="bg-[#00e4c3] w-[50%] hover:bg-[#00f0b5] flex items-center justify-center text-black text-center font-semibold  rounded-full transition duration-300"
         >
           Repozytorium
         </a>

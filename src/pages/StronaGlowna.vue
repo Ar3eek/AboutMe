@@ -18,10 +18,13 @@ onMounted(() => {
     index++
     if (index >= fullText.length) clearInterval(interval)
   }, 100)
-})
 
-onMounted(() => {
   AOS.init({ once: true, duration: 1000 })
+
+  // Scroll to top on mobile
+  if (window.innerWidth <= 768) {
+    window.scrollTo(0, 0)
+  }
 })
 </script>
 
@@ -57,7 +60,7 @@ onMounted(() => {
       </svg>
       <div class="relative z-10">
         <div>
-          <h2 class="text-[2rem] md:text-[5.3rem] flex-wrap">
+          <h2 class="text-[2.5rem] md:text-[5.3rem] flex-wrap">
             <span class="text-white pr-[8px]">Frontend</span>
             <span class="text-[#00e4c3]">developer</span>
           </h2>
@@ -80,9 +83,9 @@ onMounted(() => {
       </div>
     </section>
 
-    <MiddleBar class="mb-[200px]" />
+    <MiddleBar class="md:mb-[200px]" />
     <ProjektBar />
-    <BottomBar class="pt-[200px]" />
+    <BottomBar class="md:pt-[200px]" />
     <Footer />
   </div>
 </template>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="relative w-full h-[160px] bg-gradient-to-r from-[#1f2937] opacity-70 to-[#0e0e0e] overflow-hidden shadow-lg  group transition-all duration-500 dark:bg-black ">
+  <div class="relative w-full md:h-[160px] bg-gradient-to-r from-[#1f2937] opacity-70 to-[#0e0e0e] overflow-hidden shadow-lg  group transition-all duration-500 dark:bg-black ">
 
     <!-- CENTROWANA ZAWARTOŚĆ -->
     <div class="relative z-10 sm:flex flex-col sm:flex-row md:justify-evenly items-center h-full  gap-x-16 p-4  text-white text-left">

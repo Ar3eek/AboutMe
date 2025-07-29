@@ -22,7 +22,7 @@ onMounted(() => {
 
     <!-- Główna zawartość na środku -->
     <div class="flex-1 flex flex-col justify-center items-center text-center px-4 space-y-10">
-      <h1 class="text-4xl font-bold leading-snug">
+      <h1 class="text-2xl md:text-4xl font-bold leading-snug pt-[30px]">
         Wybierz <span class="text-[#00e4c3]">jak chcesz</span> się ze mną
         <span class="text-[#00e4c3]"> skontaktować</span>
       </h1>

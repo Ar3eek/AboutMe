@@ -10,13 +10,13 @@ const toggleMenu = () => {
 
 <template>
   <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50  ">
-    <nav class="flex items-center   justify-between max-w-7xl mx-auto px-6 py-4">
+    <nav class="flex flex-col md:flex-row items-center  justify-center  md:justify-between max-w-7xl mx-auto px-6 py-4">
       <div>
-        <router-link to="/StronaGlowna" class="text-3xl font-bold">Arkadiusz Korzeniowski</router-link>
+        <router-link to="/StronaGlowna" class=" text-2xl md:text-3xl  font-bold">Arkadiusz Korzeniowski</router-link>
       </div>
 
       <!-- Desktop menu -->
-      <ul class="hidden md:flex md:gap-6 md:text-xl  flex-wrap">
+      <ul class=" flex  md:gap-6 md:text-xl text-[0.9em] flex-wrap pt-[30px] md:pt-0 gap-x-[20px]">
         <router-link to="/Kontakt" class="relative group hover:text-green-300">
           Kontakt
           <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -36,25 +36,33 @@ const toggleMenu = () => {
         </a>
       </ul>
 
-      <!-- Hamburger button (mobile only) -->
-      <button @click="toggleMenu" class="md:hidden text-3xl focus:outline-none">
+      <!-- <button @click="toggleMenu" class="md:hidden text-3xl focus:outline-none">
         ☰
-      </button>
+      </button> --->
     </nav>
 
-    <!-- Mobile menu -->
+
+    <!--
     <transition name="fade-slide">
       <div
           v-if="isMenuOpen"
           class="md:hidden  cursor-pointer absolute left-4 right-4 mt-2 bg-[#1f2937] bg-opacity-95 rounded-xl shadow-xl p-6 transition-all duration-500 ease-in-out transform origin-top scale-100 z-50"
       >
         <ul class="flex flex-col gap-4 text-lg">
-          <router-link @click="toggleMenu" to="/Kontakt" class="hover:text-green-300 cursor-pointer">Kontakt</router-link>
-          <router-link @click="toggleMenu" to="/Omnie" class="hover:text-green-300">O mnie</router-link>
-          <router-link @click="toggleMenu" to="/Technologie" class="hover:text-green-300">GitHub</router-link>
+          <router-link  to="/Kontakt" class="hover:text-green-300 cursor-pointer">Kontakt</router-link>
+          <router-link  to="/Omnie" class="hover:text-green-300">O mnie</router-link>
+          <a
+              href="https://github.com/Ar3eek"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="relative group hover:text-green-300"
+          >
+            GitHub
+            <span class="hover:text-green-300"></span>
+          </a>
         </ul>
       </div>
-    </transition>
+    </transition>--->
   </header>
 </template>
 
