@@ -26,7 +26,7 @@ const skills = [
   'GitHub',
   'AOS.js',
   'LightBox',
-  'Play Guitar',
+  'Gra na Gitarze',
 ];
 </script>
 
