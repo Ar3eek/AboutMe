@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import Nav from '../components/Nawigacja.vue'
 import Stopka from '../components/Stopka.vue'
 
-
+const buttonsContainer = ref(null)
 onMounted(() => {
   gsap.from(buttonsContainer.value, {
     y: 60,
