@@ -1,0 +1,1 @@
+import{N as e}from"./Nawigacja-2d7dea77.js";import{o as t,c as o,l as s}from"./index-7110c4c9.js";const a={class:"font-sans bg-[#0e0e0e] text-white min-h-screen"},m={__name:"Technologie",setup(c){return(n,r)=>(t(),o("div",a,[s(e)]))}};export{m as default};
