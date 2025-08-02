@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 
 import Nav from "../components/Nawigacja.vue"
-import Footer from "../components/Stopka.vue"
+import Stopka from "../components/Stopka.vue"
 import MiddleBar from "../components/MiddleBar.vue"
 import ProjektBar from "../components/ProjektBar.vue"
 import BottomBar from "../components/BottomBar.vue"
@@ -86,7 +86,7 @@ onMounted(() => {
     <MiddleBar class="md:mb-[200px]" />
     <ProjektBar />
     <BottomBar class="md:pt-[200px]" />
-    <Footer />
+    <Stopka />
   </div>
 </template>
 
