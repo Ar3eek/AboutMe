@@ -20,7 +20,7 @@
         <path fill="#089e8d" fill-opacity="0.2"
               d="M0,160L80,176C160,192,320,224,480,200C640,176,800,96,960,96C1120,96,1280,160,1360,192L1440,224V320H0Z" />
       </svg>
-      <p class="absolute w-full text-center z-10 bottom-[30px] left-1/2 translate-x-[-50%] text-white text-base text-[0.7rem] md:text-[0.7rem] ">
+      <p class="absolute w-full text-center z-10 bottom-[30px] left-1/2 translate-x-[-50%] text-white text-base text-[0.59rem] md:text-[0.7rem] ">
         Copyright &copy; 2025 Arkadiusz Korzeniowski. Wszystkie prawa zastrzeżone.
       </p>
     </div>

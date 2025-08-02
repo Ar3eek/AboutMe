@@ -1,4 +1,26 @@
-<script setup>
+<script setup >
+
+
+import { computed } from 'vue'
+
+const startDate = new Date('2023-09-01')
+const today = new Date()
+
+const totalMonths = Math.floor((today - startDate) / (1000 * 60 * 60 * 24 * 30))
+const years = Math.floor(totalMonths / 12)
+const months = totalMonths % 12
+
+function formatDuration(years, months) {
+  const yearText = years > 0 ? `${years} ${years === 1 ? 'roku' : 'lat'}` : ''
+  const monthText = months > 0 ? `${months} ${months === 1 ? 'miesiąca' : 'miesięcy'}` : ''
+  if (yearText && monthText) return `od ${yearText} i ${monthText}`
+  if (yearText) return `od ${yearText}`
+  if (monthText) return `od ${monthText}`
+  return 'od niedawna'
+}
+
+const durationText = `Koduję ${formatDuration(years, months)}`
+
 const technologies = [
   { name: 'HTML + CSS', duration: '1 rok, 6 miesięcy' },
   { name: 'JavaScript', duration: '1 rok, 6 miesięcy' },
@@ -63,7 +85,7 @@ const skills = [
       <div class="relative z-10">
         <h1 class="text-2xl font-bold text-white">Arek</h1>
         <p class="text-purple-200">Frontend Developer</p>
-        <p class="text-sm text-white/70">Koduję od 1 roku i 9 miesięcy</p>
+        <p class="text-sm text-white/70"> {{ durationText }} </p>
       </div>
     </div>
 
@@ -74,7 +96,7 @@ const skills = [
           <div
               v-for="skill in skills"
               :key="skill"
-              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
           >
             {{ skill }}
           </div>
@@ -102,7 +124,7 @@ const skills = [
           <div
               v-for="item in technologies"
               :key="item.name"
-              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
           >
             <p>{{ item.name }}</p>
             <p class="text-sm text-white/70">{{ item.duration }}</p>
@@ -113,7 +135,7 @@ const skills = [
           <div
               v-for="item in newTechnologies"
               :key="item.name"
-              class="bg-slate-700 text-[#0AD1c8] font-medium px-4 py-2 rounded-md text-center"
+              class="bg-slate-700 text-[#00e4c3] font-medium px-4 py-2 rounded-md text-center"
           >
             <p>{{ item.name }}</p>
             <p class="text-sm text-white/70">{{ item.duration }}</p>
