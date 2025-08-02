@@ -12,7 +12,7 @@ const toggleMenu = () => {
   <header class="pt-[50px] top-0 bg-opacity-60 backdrop-blur-md z-50  ">
     <nav class="flex flex-col md:flex-row items-center  justify-center  md:justify-between max-w-7xl mx-auto px-6 py-4">
       <div>
-        <router-link to="/StronaGlowna" class=" text-2xl md:text-3xl  font-bold">Arkadiusz Korzeniowski</router-link>
+        <router-link to="/" class=" text-2xl md:text-3xl  font-bold">Arkadiusz Korzeniowski</router-link>
       </div>
 
       <!-- Desktop menu -->
