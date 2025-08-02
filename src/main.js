@@ -10,6 +10,9 @@ const head = createHead();
 const router = createRouter({
     history: createWebHistory(),
     routes, // short for `routes: routes`
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0, behavior: 'smooth' };
+    }//
 })
 
 createApp(App)

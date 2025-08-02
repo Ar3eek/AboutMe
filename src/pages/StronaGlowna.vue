@@ -76,7 +76,7 @@ onMounted(() => {
                 to="/Kontakt"
                 class="group relative inline-flex items-center justify-center px-6 py-3 text-base md:text-lg font-semibold text-[#00e4c3] border border-[#00e4c3] rounded-full transition-all duration-300 ease-in-out hover:bg-[#00e4c3]/10 hover:shadow-[0_0_25px_#00e4c3] backdrop-blur-sm"
             >
-              <span class="relative z-10 text-white tracking-wider">Contact me</span>
+              <span class="relative z-10 text-white tracking-wider">Skontaktuj się ze mną !</span>
             </router-link>
           </div>
         </div>

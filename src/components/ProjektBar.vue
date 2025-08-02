@@ -3,8 +3,7 @@ import { onMounted, ref, watch, onBeforeUnmount } from "vue";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const email = ref('')
-const wiadomosc = ref('')
+
 const loading = ref(true)
 
 const isModalOpen = ref(false)
@@ -132,7 +131,7 @@ onMounted(() => {
     <div class="max-w-6xl mx-auto">
       <div>
         <h3 class="text-4xl font-bold text-center mb-[10px]">
-          Wybierz project
+          Wybierz projekt
         </h3>
         <p class="text-sm opacity-50 font-bold text-center mb-12" >
           Odwiedź mojego <span class="text-[#00e4c3]">
