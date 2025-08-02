@@ -4,7 +4,6 @@ import {createHead} from "@vueuse/head";
 import App from './App.vue'
 import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import routes from "./routes.js";
-
 const head = createHead();
 
 const router = createRouter({
