@@ -75,6 +75,17 @@ onMounted(() => {
               class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert" />
           <span class="text-white">Instagram</span>
         </a>
+        <a
+            href="tel:792-276-388"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-[20px] flex items-center gap-x-[10px] border border-white px-6 py-3 shadow-md transition hover:border-[#00e4c3] hover:bg-[#00e4c3]/70 hover:shadow-[0_4px_12px_rgba(0,228,195,0.10)] group">
+          <img
+              src="/Immages/phone.svg"
+              alt="Telefon"
+              class="h-[24px] rotate-icon group-hover:brightness-0 group-hover:invert" />
+          <span class="text-white">Telefon</span>
+        </a>
       </div>
     </div>
 
